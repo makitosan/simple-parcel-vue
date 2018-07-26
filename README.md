@@ -1,4 +1,5 @@
 # simple-parcel-vue
+DEMO: https://makitosan.github.io/simple-parcel-vue/
 
 # HOW TO USE
 

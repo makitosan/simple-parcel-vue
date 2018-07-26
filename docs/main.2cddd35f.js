@@ -7397,6 +7397,9 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
 
 exports.default = {
     name: 'app',
@@ -7414,7 +7417,54 @@ exports.default = {
     
         /* template */
         Object.assign($015149, (function () {
-          var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('h1',[_vm._v("Hello, app.vue")]),_vm._v(" "),_c('p',[_vm._v(_vm._s(_vm.msg))])])}
+          var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('h1',[_vm._v("Hello, app.vue")]),_vm._v(" "),_c('p',[_vm._v(_vm._s(_vm.msg))]),_vm._v(" "),_c('dummy'),_vm._v(" "),_c('dummy',{attrs:{"myname":"Dummy"}}),_vm._v(" "),_c('dummy',{attrs:{"myname":"Paul"}})],1)}
+var staticRenderFns = []
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+},{}],"ocXn":[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+    name: 'dummy',
+    props: {
+        myname: {
+            type: String,
+            default: 'default name'
+        }
+    },
+    data: function data() {
+        return {
+            msg: 'My name is'
+        };
+    }
+};
+        var $8856dd = exports.default || module.exports;
+      
+      if (typeof $8856dd === 'function') {
+        $8856dd = $8856dd.options;
+      }
+    
+        /* template */
+        Object.assign($8856dd, (function () {
+          var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v("This is Dummy.vue.")]),_vm._v(" "),_c('p',[_vm._v(_vm._s(_vm.msg)+" "+_vm._s(_vm.myname)+".")])])}
 var staticRenderFns = []
 
           return {
@@ -7437,13 +7487,20 @@ var _App = require('./App.vue');
 
 var _App2 = _interopRequireDefault(_App);
 
+var _Dummy = require('./Dummy.vue');
+
+var _Dummy2 = _interopRequireDefault(_Dummy);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// using runtime-only build of Vue
+_vue2.default.component('dummy', _Dummy2.default);
 
 new _vue2.default({
     el: '#app',
     render: function render(h) {
         return h(_App2.default);
-    }
+    } // this is not required full (including compiler) Vue
 });
-},{"vue":"4673","./App.vue":"6plK"}]},{},["HJD/"], null)
-//# sourceMappingURL=/simple-parcel-vue/main.c1540804.map
+},{"vue":"4673","./App.vue":"6plK","./Dummy.vue":"ocXn"}]},{},["HJD/"], null)
+//# sourceMappingURL=/simple-parcel-vue/main.2cddd35f.map

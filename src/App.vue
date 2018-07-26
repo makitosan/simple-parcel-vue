@@ -2,6 +2,9 @@
     <div id="app">
         <h1>Hello, app.vue</h1>
         <p>{{msg}}</p>
+        <dummy></dummy>
+        <dummy myname="Dummy"></dummy>
+        <dummy myname="Paul"></dummy>
     </div>
 </template>
 

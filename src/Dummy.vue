@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>This is Dummy.vue.</h1>
+        <h4>This is Dummy.vue.</h4>
         <p>{{msg}} {{myname}}.</p>
     </div>
 </template>

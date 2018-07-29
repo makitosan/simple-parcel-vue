@@ -7400,6 +7400,7 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
 
 exports.default = {
     name: 'app',
@@ -7417,7 +7418,7 @@ exports.default = {
     
         /* template */
         Object.assign($015149, (function () {
-          var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('h1',[_vm._v("Hello, app.vue")]),_vm._v(" "),_c('p',[_vm._v(_vm._s(_vm.msg))]),_vm._v(" "),_c('dummy'),_vm._v(" "),_c('dummy',{attrs:{"myname":"Dummy"}}),_vm._v(" "),_c('dummy',{attrs:{"myname":"Paul"}})],1)}
+          var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('h1',[_vm._v("Hello, app.vue")]),_vm._v(" "),_c('p',[_vm._v(_vm._s(_vm.msg))]),_vm._v(" "),_c('dummy'),_vm._v(" "),_c('dummy',{attrs:{"myname":"Dummy"}}),_vm._v(" "),_c('dummy',{attrs:{"myname":"Paul"}}),_vm._v(" "),_c('todo-app')],1)}
 var staticRenderFns = []
 
           return {
@@ -7464,8 +7465,66 @@ exports.default = {
     
         /* template */
         Object.assign($8856dd, (function () {
-          var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h1',[_vm._v("This is Dummy.vue.")]),_vm._v(" "),_c('p',[_vm._v(_vm._s(_vm.msg)+" "+_vm._s(_vm.myname)+".")])])}
+          var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h4',[_vm._v("This is Dummy.vue.")]),_vm._v(" "),_c('p',[_vm._v(_vm._s(_vm.msg)+" "+_vm._s(_vm.myname)+".")])])}
 var staticRenderFns = []
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+},{}],"z99I":[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+    name: 'TodoApp',
+    data: function data() {
+        return {
+            todoList: [],
+            todoItem: ''
+        };
+    },
+    methods: {
+        addItem: function addItem() {
+            this.todoList.push(this.todoItem);
+            this.todoItem = '';
+        }
+    }
+};
+        var $3b0aa0 = exports.default || module.exports;
+      
+      if (typeof $3b0aa0 === 'function') {
+        $3b0aa0 = $3b0aa0.options;
+      }
+    
+        /* template */
+        Object.assign($3b0aa0, (function () {
+          var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._m(0),_vm._v(" "),_c('div',{attrs:{"id":"controller"}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.todoItem),expression:"todoItem"}],attrs:{"type":"text"},domProps:{"value":(_vm.todoItem)},on:{"keypress":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.addItem($event)},"input":function($event){if($event.target.composing){ return; }_vm.todoItem=$event.target.value}}}),_vm._v(" "),_c('button',{on:{"click":_vm.addItem}},[_vm._v("ADD")])]),_vm._v(" "),_c('div',{attrs:{"id":"todos"}},_vm._l((_vm.todoList),function(item){return _c('div',[_c('span',[_vm._v(_vm._s(item))])])}))])}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('h4',[_vm._v("TODO LIST")])])}]
 
           return {
             render: render,
@@ -7491,10 +7550,15 @@ var _Dummy = require('./Dummy.vue');
 
 var _Dummy2 = _interopRequireDefault(_Dummy);
 
+var _TodoApp = require('./TodoApp.vue');
+
+var _TodoApp2 = _interopRequireDefault(_TodoApp);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// using runtime-only build of Vue
-_vue2.default.component('dummy', _Dummy2.default);
+_vue2.default.component('dummy', _Dummy2.default); // using runtime-only build of Vue
+
+_vue2.default.component('todo-app', _TodoApp2.default);
 
 new _vue2.default({
     el: '#app',
@@ -7502,5 +7566,5 @@ new _vue2.default({
         return h(_App2.default);
     } // this is not required full (including compiler) Vue
 });
-},{"vue":"4673","./App.vue":"6plK","./Dummy.vue":"ocXn"}]},{},["HJD/"], null)
-//# sourceMappingURL=/simple-parcel-vue/main.2cddd35f.map
+},{"vue":"4673","./App.vue":"6plK","./Dummy.vue":"ocXn","./TodoApp.vue":"z99I"}]},{},["HJD/"], null)
+//# sourceMappingURL=/simple-parcel-vue/main.1538b4eb.map

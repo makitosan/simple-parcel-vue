@@ -5,6 +5,7 @@
         <dummy></dummy>
         <dummy myname="Dummy"></dummy>
         <dummy myname="Paul"></dummy>
+        <todo-app></todo-app>
     </div>
 </template>
 
